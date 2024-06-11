@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20sp"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icono_app"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/BuscarVinilos_textoInferior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bienvenido_a_tocappdiscos_echale_un_ojo_a_las_cosas_que_puedes_hacer"
+            android:gravity="center"
+            android:layout_marginTop="20sp"
+            android:layout_margin = "10sp"/>
+
+    </LinearLayout>
+
+
+
+    <!-- Layout de Buscar Vinilo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50sp">
+
+        <EditText
+            android:id="@+id/BuscarVinilos_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/BuscarVinilos_editText_hint"
+            android:autofillHints="no" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/BuscarVinilos_boton"
+                android:text="@string/BuscarVinilos_boton_texto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Layout de Buscar Perfil -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <EditText
+            android:id="@+id/BuscarPerfiles_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/BuscarPerfiles_editText_texto"
+            android:autofillHints="no" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/BuscarPerfiles_boton"
+                android:text="@string/BuscarPerfiles_boton_texto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/mainActivity_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        android:layout_gravity="bottom"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        android:layout_marginTop="60dp"
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_buscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buscar_main_title" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_mensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mensaje_main_title" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+</LinearLayout>
+</layout>
